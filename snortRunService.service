@@ -1,0 +1,10 @@
+[Unit]
+Description= snort service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/snort -d -l /etc/snort/log -b -c /etc/snort/snort.conf
+
+
+[Install]
+WantedBy=multi-user.target
